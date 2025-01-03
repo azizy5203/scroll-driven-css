@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "scroll driven css animations",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "build": "gulp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^5.0.0",
     "lite-server": "^2.6.1"
   }
 }

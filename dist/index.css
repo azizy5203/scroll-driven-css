@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #ce3764;
+  background-color: #262335;
+}
+
+p {
+  border: 2px dashed crimson;
+  padding: 1rem;
+}
+
+.scale-section p {
+  animation: fadeScale ease-in-out both; /* Add CSS animation */
+  view-timeline-name: --scale-fade;
+  view-timeline-axis: block;
+  animation-timeline: --scale-fade; /* Remove scroll-driven animation */
+  animation-range: entry 100% cover 20%;
+  transform-origin: center center;
+}
+@keyframes fadeScale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-section p {
+  animation: slideReveal ease-in-out both; /* Add CSS animation */
+  view-timeline-name: --slide-reveal;
+  view-timeline-axis: block;
+  animation-timeline: --slide-reveal; /* Remove scroll-driven animation */
+  animation-range: entry 100% cover 20%;
+  /* transform-origin: center center; */
+}
+@keyframes slideReveal {
+  0% {
+    transform: translateX(calc(-100% - 18px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bg-slide-section {
+  position: sticky;
+  inset: 0;
+}
+.scroll-bg {
+  animation: scaleDown linear both;
+  transform-origin: center center;
+}
+
+.scroll-bg-1 {
+  view-timeline-name: --scroll-bg-1;
+  view-timeline-axis: block;
+  animation-timeline: --scroll-bg-1;
+  animation-range: entry 100% cover 100%;
+}
+.scroll-bg-2 {
+  view-timeline-name: --scroll-bg-2;
+  view-timeline-axis: block;
+  animation-timeline: --scroll-bg-2;
+  animation-range: entry 200% cover 130%;
+}
+/* .scroll-bg-3 {
+  view-timeline-name: --scroll-bg-3;
+  view-timeline-axis: block;
+  animation-timeline: --scroll-bg-3;
+  animation-range: entry 250% cover 130%;
+} */
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* .scroll-bg-1-right {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid transparent;
+  border-bottom: 50vh solid transparent;
+  border-right: 50vw solid green;
+} */
+
+.top-tri {
+  animation: slideTop ease-in-out both;
+  view-timeline-name: --slide-top;
+  view-timeline-axis: block;
+  animation-timeline: --slide-top;
+  animation-range-start: entry 200%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+}
+
+.bottom-tri {
+  animation: slideBottom ease-in-out both;
+  view-timeline-name: --slide-bottom;
+  view-timeline-axis: block;
+  animation-timeline: --slide-bottom;
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(100%) translateX(-50%);
+  }
+}
+
+.left-tri {
+  animation: slideLeft ease-in-out both;
+  view-timeline-name: --slide-left;
+  view-timeline-axis: block;
+  animation-timeline: --slide-left;
+  /* animation-range: 45% 75%; */
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-50%);
+  }
+}
+
+.right-tri {
+  animation: slideRight ease-in-out both;
+  view-timeline-name: --slide-left;
+  view-timeline-axis: block;
+  animation-timeline: --slide-left;
+  /* animation-range: 75% 90%; */
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(100%) translateY(-50%);
+  }
+}
