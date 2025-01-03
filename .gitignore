@@ -62,3 +62,5 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 .codegpt
+
+node_modules

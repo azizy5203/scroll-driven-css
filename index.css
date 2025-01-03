@@ -95,3 +95,77 @@ p {
   border-bottom: 50vh solid transparent;
   border-right: 50vw solid green;
 } */
+
+.top-tri {
+  animation: slideTop ease-in-out both;
+  view-timeline-name: --slide-top;
+  view-timeline-axis: block;
+  animation-timeline: --slide-top;
+  animation-range-start: entry 200%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+}
+
+.bottom-tri {
+  animation: slideBottom ease-in-out both;
+  view-timeline-name: --slide-bottom;
+  view-timeline-axis: block;
+  animation-timeline: --slide-bottom;
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(100%) translateX(-50%);
+  }
+}
+
+.left-tri {
+  animation: slideLeft ease-in-out both;
+  view-timeline-name: --slide-left;
+  view-timeline-axis: block;
+  animation-timeline: --slide-left;
+  /* animation-range: 45% 75%; */
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-50%);
+  }
+}
+
+.right-tri {
+  animation: slideRight ease-in-out both;
+  view-timeline-name: --slide-left;
+  view-timeline-axis: block;
+  animation-timeline: --slide-left;
+  /* animation-range: 75% 90%; */
+  animation-range-start: entry 100%;
+  animation-range-end: cover 100%;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(100%) translateY(-50%);
+  }
+}
